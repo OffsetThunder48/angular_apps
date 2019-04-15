@@ -1,0 +1,36 @@
+div {
+    height: 100vh;
+    width: 100vw;
+    background-image: url(./img/div_bg.jpg);
+    background-size: contain;
+    background-repeat: no-repeat;
+    display: flex;
+}
+
+.login {
+    margin: auto;
+    text-align: center;
+}
+
+.login input {
+    display: block;
+    margin-bottom: 5px;
+    width: 15vw;
+    height: 3vh;
+    background-color: rgba(240, 128, 128, 0.5);
+    outline: 0px;
+    border: 0px;
+}
+
+.login label {
+    color: lightcoral;
+}
+
+.login button {
+    width: 40%;
+    height: 25px;
+    margin: 0px 5px;
+    border-radius: 15px;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.5)
+}
