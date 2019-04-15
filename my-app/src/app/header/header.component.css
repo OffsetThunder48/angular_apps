@@ -1,0 +1,27 @@
+.nav {
+    display: flex;
+    width: 100vw;
+    height: 30px;
+    background-color: rgba(0, 0, 0, 0.5);
+    list-style: none;
+    align-items: center;
+    line-height: 200%;
+}
+
+.subnav {
+    color: white;
+    width: 20%;
+    text-align: center;
+    height: 100%;
+    vertical-align: middle;
+}
+
+.subnav:hover {
+    background-color: yellowgreen;
+    color: darkorchid;
+    transition: 1.5s;
+}
+
+.subsubnav {
+    display: none;
+}

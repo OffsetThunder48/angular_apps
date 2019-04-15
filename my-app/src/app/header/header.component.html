@@ -1,0 +1,8 @@
+<ul class="nav">
+  <li class="subnav" *ngFor="let item of navItems" (mouseover)="open(i)" #links>
+    {{item.name}}
+    <ul class = "subsubnav">
+      <li *ngFor="let child of item.children">{{child}}</li>
+    </ul>
+  </li>
+</ul>

@@ -13,9 +13,11 @@ export class LandingPageComponent {
   username = 'offsetthunder48';
   password = 'hahahaloser!';
   constructor(public router: Router) {}
-  login() {
+  login = () => {
     if (this.username === this.usrname.nativeElement.value && this.password === this.pswd.nativeElement.value ) {
-      this.router.navigate(['/home'])
+      this.router.navigate(['/home']);
+    } else {
+      alert('Invalid Username/Password!');
     }
   }
 }
