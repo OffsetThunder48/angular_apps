@@ -1,4 +1,4 @@
-import { Component, ViewChildren, QueryList } from '@angular/core';
+import { Component } from '@angular/core';
 import { HeaderLinkModel } from './header-link.model';
 
 @Component({
@@ -6,8 +6,7 @@ import { HeaderLinkModel } from './header-link.model';
   templateUrl: './header.component.html',
   styleUrls: ['./header.component.css']
 })
-export class HeaderComponent {
-  @ViewChildren('links') components: QueryList<HeaderComponent>;
+export class HeaderComponent implements ngOnInit {
 
   navItems: Array<HeaderLinkModel> = [
     {name: 'Home', children: ['<=>']},
@@ -17,8 +16,18 @@ export class HeaderComponent {
     {name: 'Contact', children: ['IRL', 'email']}
   ];
 
-  open = (i: number) => {
-   console.log(this.components); 
+  open = (i: number, el: any) => {
+    const elem = document.getElementsByClassName('subsubnav').item(i) as HTMLElement;
+    if (elem.style.visibility === 'hidden') {
+      elem.style.visibility = 'visible';
+    } else {
+      elem.style.visibility = 'hidden';
+    }
+    // console.log(i, el);
+  }
+
+  ngOnInit() {
+
   }
 
 }

@@ -6,6 +6,7 @@
     list-style: none;
     align-items: center;
     line-height: 200%;
+    position: relative;
 }
 
 .subnav {
@@ -23,5 +24,17 @@
 }
 
 .subsubnav {
-    display: none;
+    visibility: hidden;
+    position: absolute;
+    color: white;
+    width: 20%;
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.5);
+    list-style: none;
+}
+
+.subsubnav li:hover {
+    background-color: yellowgreen;
+    color: darkorchid;
+    transition: 1.5s;
 }
