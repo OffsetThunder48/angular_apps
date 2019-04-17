@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Output, EventEmitter, OnChanges } from '@angular/core';
 import { HeaderLinkModel } from './header-link.model';
 
 @Component({
@@ -6,8 +6,7 @@ import { HeaderLinkModel } from './header-link.model';
   templateUrl: './header.component.html',
   styleUrls: ['./header.component.css']
 })
-export class HeaderComponent implements ngOnInit {
-
+export class HeaderComponent {
   navItems: Array<HeaderLinkModel> = [
     {name: 'Home', children: ['<=>']},
     {name: 'About Me', children: ['Professional', 'Academic', 'Personal']},
@@ -15,19 +14,17 @@ export class HeaderComponent implements ngOnInit {
     {name: 'Gallery', children: ['Games', 'Music', 'Science']},
     {name: 'Contact', children: ['IRL', 'email']}
   ];
-
   open = (i: number, el: any) => {
     const elem = document.getElementsByClassName('subsubnav').item(i) as HTMLElement;
     if (elem.style.visibility === 'hidden') {
       elem.style.visibility = 'visible';
+      elem.onmouseleave = () => {
+        elem.style.visibility = 'hidden';
+      };
     } else {
-      elem.style.visibility = 'hidden';
+        elem.style.visibility = 'hidden';
     }
     // console.log(i, el);
-  }
-
-  ngOnInit() {
-
   }
 
 }
