@@ -6,13 +6,15 @@ import { AppComponent } from './app.component';
 import { LandingPageComponent } from './landing-page/landing-page.component';
 import { HomePageComponent } from './home-page/home-page.component';
 import { HeaderComponent } from './header/header.component';
+import { HomePageItemComponent } from './home-page/home-page-item/home-page-item.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     LandingPageComponent,
     HomePageComponent,
-    HeaderComponent
+    HeaderComponent,
+    HomePageItemComponent
   ],
   imports: [
     BrowserModule,

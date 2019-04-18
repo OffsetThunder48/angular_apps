@@ -21,6 +21,7 @@
     background-color: yellowgreen;
     color: darkorchid;
     transition: 1.5s;
+    cursor: pointer;
 }
 
 .subsubnav {
@@ -37,4 +38,5 @@
     background-color: yellowgreen;
     color: darkorchid;
     transition: 1.5s;
+    cursor: pointer;
 }
