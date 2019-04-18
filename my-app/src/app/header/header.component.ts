@@ -20,6 +20,9 @@ export class HeaderComponent {
     const elem = document.getElementsByClassName('subsubnav').item(i) as HTMLElement;
     if (elem.style.visibility === 'hidden') {
       elem.style.visibility = 'visible';
+      elem.addEventListener('mouseleave', () => {
+        elem.style.visibility = 'hidden';
+      });
     } else {
       elem.style.visibility = 'hidden';
     }
