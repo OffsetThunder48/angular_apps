@@ -6,5 +6,8 @@ import { Component } from '@angular/core';
   styleUrls: ['./home-page.component.css']
 })
 export class HomePageComponent {
-
+  numbers: Array<number>;
+  constructor() {
+    this.numbers = Array(16).map((x, i) => i);
+  }
 }
