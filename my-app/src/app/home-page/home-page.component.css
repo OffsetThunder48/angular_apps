@@ -1,8 +1,8 @@
-div {
+div:nth-child(1) {
     background-image: url(./img/home_bg.jpg);
     background-size: cover;
-    background-attachment: scroll;
-    height: 100vh;
+    background-attachment: fixed;
+    height: 200vh;
     width: 100vw;
 }
 .layout {
