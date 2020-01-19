@@ -11,15 +11,17 @@ export class LoginComponent {
     isValid = null;
     userDetails = new FormGroup({
         email: new FormControl('', [
+            Validators.required,
             Validators.email
         ]),
         password: new FormControl('', [
+            Validators.required,
             Validators.minLength(6)
         ])
     });
     onFormSubmit = () => {
         this.isValid = false;
-        if (this.userDetails.invalid || this.userDetails.pristine) {
+        if (this.userDetails.invalid) {
             this.userDetails.reset();
             return;
         }
