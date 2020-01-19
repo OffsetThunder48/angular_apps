@@ -1,0 +1,64 @@
+.bckgrnd {
+    width: 100vw;
+    height: 100vh;
+    background: url('../../assets/images/green_pattern_maze_textures_ultra_3840x2160_hd-wallpaper-326495.jpg') no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    margin: 0px;
+    padding: 0px;
+}
+
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 40vw;
+    height: 30vh;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 15px;
+    background-color: rgba(5, 5, 5, 0.5);
+    font-weight: lighter;
+}
+
+.wrapper .field {
+    text-align: center;
+    width: 100%;
+    margin: 7px 0px; 
+}
+
+.wrapper .field input {
+    border: 5px;
+    border-radius: 50px;
+    height: 5vh;
+    width: 20%;
+    padding: 0px 5px;
+    background-color: teal;
+    color: white;
+}
+
+::placeholder {
+    color: white;
+    opacity: 1;
+}
+
+.wrapper .field label {
+    margin-right: 7px;
+    color: white;
+}
+
+.wrapper input:focus {
+    outline: none;
+}
+
+.wrapper button {
+    outline: 0px;
+    border: 0px;
+    padding: 5px;
+    width: 20%;
+}

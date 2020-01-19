@@ -1,0 +1,14 @@
+<div class="bckgrnd">
+    <form class="wrapper" [formGroup]="userDetails">
+        <div class="field">
+            <label>email id</label>
+            <input type="email" placeholder="Enter Username" formControlName="email" />
+        </div>
+        <div *ngIf="isValid">e mail not valid!</div>
+        <div class="field">
+            <label>password</label>
+            <input type="password" placeholder="Enter Password" formControlName="password" />
+        </div>
+        <button type="submit">Login</button>
+    </form>
+</div>
