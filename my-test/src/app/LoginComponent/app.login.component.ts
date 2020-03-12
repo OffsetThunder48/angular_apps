@@ -1,14 +1,23 @@
 import { Component } from '@angular/core';
 import { FormGroup, FormControl, Validators } from '@angular/forms';
+import { Router } from '@angular/router';
 
 @Component({
     selector: 'app-login-component',
     templateUrl: './app.login.component.html',
     styleUrls: ['./app.login.component.css']
 })
-
 export class LoginComponent {
-    isValid = null;
+    correctDetails = {
+        username: 'test@test.com',
+        password: 'testtest'
+    };
+    constructor(private router: Router) {
+    }
+     userData = {
+        username: '',
+        password: ''
+    };
     userDetails = new FormGroup({
         email: new FormControl('', [
             Validators.required,
@@ -20,17 +29,19 @@ export class LoginComponent {
         ])
     });
     onFormSubmit = () => {
-        this.isValid = false;
-        if (this.userDetails.invalid) {
-            this.userDetails.reset();
+        if (this.userData.username !== this.correctDetails.username || this.userData.password !== this.correctDetails.password) {
+            alert('Incorrect Credentials!');
             return;
+        } else {
+            this.router.navigate(['/register']);
         }
-        this.isValid = true;
     }
-    get email() {
-        return this.userDetails.get('email');
+    readuname = (event) => {
+        this.userData.username = event.target.value;
+        console.log(this.userData.username);
     }
-    get password() {
-        return this.userDetails.get('password');
+    readpswd = (event) => {
+        this.userData.password = event.target.value;
+        console.log(this.userData.password);
     }
 }

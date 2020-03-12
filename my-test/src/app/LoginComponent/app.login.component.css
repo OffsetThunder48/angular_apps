@@ -16,7 +16,7 @@
     justify-content: center;
     align-items: center;
     width: 40vw;
-    height: 30vh;
+    height: 40vh;
     position: absolute;
     top: 50%;
     left: 50%;
@@ -32,8 +32,8 @@
     margin: 7px 0px; 
 }
 
-.wrapper .field input {
-    border: 5px;
+.wrapper .field input.ng-pristine {
+    border: 0px;
     border-radius: 50px;
     height: 5vh;
     width: 20%;
@@ -47,13 +47,39 @@
     opacity: 1;
 }
 
+input.ng-invalid.ng-dirty.ng-touched {
+    border: 1px solid red;
+    border-radius: 50px;
+    height: 5vh;
+    width: 20%;
+    padding: 0px 5px;
+    background-color: teal;
+    color: white;
+}
+
 .wrapper .field label {
     margin-right: 7px;
     color: white;
 }
 
-.wrapper input:focus {
+.wrapper .field input:focus {
     outline: none;
+}
+
+.wrapper .field input.ng-valid {
+    border: 0px;
+    border-radius: 50px;
+    height: 5vh;
+    width: 20%;
+    padding: 0px 5px;
+    background-color: teal;
+    color: white;
+}
+
+.wrapper .field p {
+    color: white;
+    background-color: rgba(5, 5, 5, 0.5);
+    margin: 5px 0px;
 }
 
 .wrapper button {

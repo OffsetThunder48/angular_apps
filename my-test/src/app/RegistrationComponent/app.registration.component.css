@@ -1,0 +1,90 @@
+.bckgrnd {
+    width: 100vw;
+    height: 100vh;
+    background: url('../../assets/images/regpagebckgrnd.jpg') no-repeat center center fixed;
+    background-size: cover;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    margin: 0px;
+    padding: 0px;
+}
+
+.bckgrnd .wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 50vw;
+    height: auto;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 15px;
+    background-color: rgba(5, 5, 5, 0.5);
+    font-weight: lighter;
+}
+
+.bckgrnd .wrapper .field {
+    width: 100%;
+    margin: 10px 0px;
+    text-align: center;
+
+}
+
+.bckgrnd .wrapper .field label {
+    color: white;
+    margin-right: 20px;
+}
+
+.bckgrnd .wrapper .field input {
+    width: 40%;
+    height: 30px;
+    justify-content: right;
+}
+
+.bckgrnd .wrapper .field input {
+    border: 0px;
+    outline: 0px;
+}
+
+.bckgrnd .wrapper .field input:focus {
+    outline: #eee solid 5px;
+    transition: 1s;
+}
+
+.bckgrnd .wrapper .field button {
+    margin: 0px 20px;
+}
+
+.bckgrnd .wrapper .field button:nth-child(1) {
+    width: 50px;
+    border: 0px;
+    height: 25px;
+    background-color: lightgreen;
+    color: white;
+    border-radius: 50px;
+    outline: none;
+}
+
+.bckgrnd .wrapper .field button:nth-child(2) {
+    width: 50px;
+    border: 0px;
+    height: 25px;
+    background-color: blue;
+    color: white;
+    border-radius: 50px;
+    outline: none;
+}
+
+.bckgrnd .wrapper .field button:nth-child(3) {
+    width: 50px;
+    border: 0px;
+    height: 25px;
+    background-color: red;
+    color: white;
+    border-radius: 50px;
+    outline: none;
+}

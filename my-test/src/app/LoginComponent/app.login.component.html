@@ -1,14 +1,15 @@
 <div class="bckgrnd">
-    <form class="wrapper" [formGroup]="userDetails">
+    <form class="wrapper" [formGroup]="userDetails" (ngSubmit)="onFormSubmit()">
         <div class="field">
             <label>email id</label>
-            <input type="email" placeholder="Enter Username" formControlName="email" />
+            <input type="email" placeholder="Enter Username" formControlName="email" (keyup)="readuname($event)" />
+            <p *ngIf="userDetails.get('email').invalid && userDetails.get('email').touched">e mail not valid!</p>
         </div>
-        <div *ngIf="">e mail not valid!</div>
         <div class="field">
             <label>password</label>
-            <input type="password" placeholder="Enter Password" formControlName="password" />
+            <input type="password" placeholder="Enter Password" formControlName="password" (keyup)="readpswd($event)" />
+            <p *ngIf="userDetails.get('password').invalid && userDetails.get('password').touched">password not valid!</p>
         </div>
-        <button type="submit" (click)="onFormSubmit()">Login</button>
+        <button type="submit" [disabled]="!userDetails.valid">Login</button>
     </form>
 </div>

@@ -1,0 +1,33 @@
+<div class="bckgrnd">
+    <form class="wrapper" name="userData">
+        <div class="field">
+            <label>First Name</label>
+            <input type="text" required />
+        </div>
+        <div class="field">
+            <label>Last Name</label>
+            <input type="text" required />
+        </div>
+        <div class="field">
+            <label>Phone No.</label>
+            <input type="tel" required />
+        </div>
+        <div class="field">
+            <label>Date of Birth</label>
+            <input type="date" required />
+        </div>
+        <div class="field">
+            <label>Upload CV</label>
+            <input type="file" required />
+        </div>
+        <div class="field">
+            <label>Upload Photo</label>
+            <input type="file" required />
+        </div>
+        <div class="field">
+            <button type="submit" (click)="onSubmitHandler()">Submit</button>
+            <button type="reset">Reset</button>
+            <button type="submit" [routerLink]="'/login'">Back</button>
+        </div>
+    </form>
+</div>
