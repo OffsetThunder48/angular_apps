@@ -8,8 +8,8 @@ import { Router } from '@angular/router';
 })
 
 export class LandingPageComponent {
-  @ViewChild('username') usrname: ElementRef;
-  @ViewChild('pswd') pswd: ElementRef;
+  @ViewChild('username', { static: true }) usrname: ElementRef;
+  @ViewChild('pswd', { static: true }) pswd: ElementRef;
   username = 'offsetthunder48';
   password = 'hahahaloser!';
   constructor(public router: Router) {}
